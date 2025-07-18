@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Overview and Insight into Nuclear Fusion and Fission</title>
+    <style>
+        hr {
+            display: block;
+            border-width: 2px;
+            margin-left: -220px;
+            margin-right: -220px;
+            color: #a8bdc3;
+        }
+        body {
+            background-color: #030707;
+            color: #ffffff;
+            padding: 5px;
+            margin: 5px 250px;
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #42656f;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        a:link {
+            color: #42656f;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #42656f;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #42656f;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #42656f;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #42656f;
+            padding-top: 50px;
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #030707;
+            font-weight: bold;
+        }
+        .center{
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 90px;
+        }
+        .rightclickimg{
+            float: right;
+            display: block;
+            width: 90px;
+        }
+        .centerimg{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 700px;
+        }
+
+        .apa-reference {
+            padding-left: 36px;
+            text-indent: -36px;
+            text-align: left;
+        }
+
+        .submenu {
+            display: none;
+            margin-left: 15px;
+        }
+        .arrow {
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+    </style>
+    <script>
+         function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+        function toggleDropdown(id) {
+            var submenu = document.getElementById(id);
+            var arrow = submenu.previousElementSibling.querySelector(".arrow");
+            submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+            arrow.textContent = (submenu.style.display === "block") ? "⇊" : "⇇";
+        }
+    </script>
+</head>
+<body>
+
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <div id="menu" class="menu">
+        <a href="#home" onclick="toggleMenu()">☰</a>
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#introduction" onclick="toggleMenu()">Introduction</a>
+        <div>
+            <a href="#fusion" onclick="toggleDropdown('fusionSub')">Nuclear Fusion <span class="arrow">⇇</span></a>
+            <div id="fusionSub" class="submenu">
+                <a href="fusion.html" onclick="toggleMenu()">-All about Fusion</a>
+            </div>
+        </div>
+        <div>
+            <a href="#fission" onclick="toggleDropdown('fissionSub')">Nuclear Fission <span class="arrow">⇇</span></a>
+            <div id="fissionSub" class="submenu">
+                <a href="fission.html" onclick="toggleMenu()">-All about Fission</a>
+            </div>
+        </div>
+        <div>
+            <a href="#energyefficiency" onclick="toggleDropdown('energySub')">Energy Conversion and Efficiency<span class="arrow">⇇</span></a>
+            <div id="energySub" class="submenu">
+                <a href="energy.html" onclick="toggleMenu()">-More about Energy Conversion and Efficiency</a>
+            </div>
+        </div>
+        <div>
+            <a href="#societaleconomicalpolitical" onclick="toggleDropdown('societalSub')">Societal, Economic and Political Dimensions<span class="arrow">⇇</span></a>
+            <div id="societalSub" class="submenu">
+                <a href="societal.html" onclick="toggleMenu()">-More about Societal, Economic and Political Dimensions</a>
+            </div>
+        </div>
+        <div>
+            <a href="#scientificevaluation" onclick="toggleDropdown('evaluationSub')">Communication and Scientific Evaluation<span class="arrow">⇇</span></a>
+            <div id="evaluationSub" class="submenu">
+                <a href="evaluation.html" onclick="toggleMenu()">-An expansion on Communication and Scientific Evaluation</a>
+            </div>
+        </div>
+        <a href="#bibliography" onclick="toggleMenu()">Bibliography</a>
+    </div>
+
+    <section id="home">
+        <header>
+            <h1>An Overview and Insight into Nuclear Fusion and Fission</h1>
+        </header>
+    </section>
+<hr>
+<br>
+<br>
+    <section id="introduction">
+        <p>Social media use among teenagers is widespread, with many spending hours scrolling
+            through platforms like TikTok, Instagram, and X (formerly Twitter). Concerns have grown over
+            the potential negative impacts of prolonged social media use on young people’s mental health
+            and well-being. While some studies highlight the positive aspects of social media, such as
+            fostering connections, others point to risks lke social stigma, anxiety, and low self-esteem.
+            <br>
+            The data collected was from two different sources, one of which was from Generation Survey
+            and the other was from Pew Research Center. The data gathered from Generation Survey was
+            available through their website. It is a large survey conducted in 2024 to explore the impact of
+            social media use on the well-being of young people that targeted 3,785 Year 10 students
+            across 340 Australian schools.
+            <br>
+            The data gathered from Pew Research Center was available online. The sample consisted of
+            1,316 U.S. teens aged 13 to 17, along with one parent from each teen’s household in 2022.</p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+
+    <section id="fusion">
+        <h2>Nuclear Fusion</h2>
+        <p>
+            <a href="fusion.html"><img src="NuclearFusionDiagram.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+        </p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+
+    <section id="fission">
+        <h2>Nuclear Fission</h2>
+        <p>
+            <a href="fission.html"><img src="NuclearFission.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+            <br>
+            <br>
+            <br>
+            <a href="fission.html"><img src="DiagramofFissionReactor.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+        </p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+
+
+    <section id="energyefficiency">
+        <h2>Energy Conversion and Efficiency</h2>
+        <p>
+            <a href="energy.html"><img src="CapacityFactorofDifferentSources.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+            <br>
+            <br>
+            <br>
+            <a href="energy.html"><img src="UraniumVsFossil.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+            <br>
+            <br>
+            <br>
+            <a href="energy.html"><img src="EnergyProducedbysources.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+        </p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+
+   <section id="societaleconomicalpolitical">
+        <h2>Societal, Economic and Political Dimensions</h2>
+        <p>
+            <a href="societal.html"><img src="CountriesUseofNuclear.png" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+        </p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+ 
+   <section id="scientificevaluation">
+        <h2>Communication and Scientific Evaluation</h2>
+        <p>
+            <a href="evaluation.html"><img src="TrendofAttitudetowardsNuclear.jpg" class="centerimg"></a>
+            <br>
+            <img src="click.png" class="rightclickimg">
+        </p>
+    </section>
+    <br>
+<br>
+    <img src="goDownAnimation.gif" alt="" class="center">
+<br>
+<br>
+
+    <section id="bibliography">
+        <h2>Bibliography</h2>
+        <p class="apa-reference">
+
+            Britannica. (2019).  <br> Proton-proton cycle | astronomy | Britannica. In Encyclopædia Britannica.   <a href="https://www.britannica.com/science/proton-proton-cycle">https://www.britannica.com/science/proton-proton-cycle</a>
+
+            <br>
+            <br>
+            <br>
+        </p>
+
+        <p class="apa-reference">
+            Chapman, J., & Research Center, L. (2011). <br> Advanced Fusion Reactors for Space Propulsion and Power Systems. 
+            <a href="https://ntrs.nasa.gov/api/citations/20110014263/downloads/20110014263.pdf">https://ntrs.nasa.gov/api/citations/20110014263/downloads/20110014263.pdf</a>
+
+            <br>
+            <br>
+            <br>
+        </p>
+
+        <p class="apa-reference">
+            European Nuclear Society. (2025).<br> Fuel Comparison. ENS; European Nuclear Society.
+             <a href="https://www.euronuclear.org/glossary/fuel-comparison/"> https://www.euronuclear.org/glossary/fuel-comparison/</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            L, J. (2024, September 26).  <br>Nuclear Power vs. Coal: Three Reasons Why Only One Will Power The Next Decade. Carbon Credits.
+        <a href="https://carboncredits.com/nuclear-power-vs-coal-three-reasons-why-only-one-will-power-the-next-decade/">https://carboncredits.com/nuclear-power-vs-coal-three-reasons-why-only-one-will-power-the-next-decade/</a>
+
+            <br>
+            <br>
+            <br>
+        </p>
+
+        <p class="apa-reference">
+            Nuclear Fission and Controlled Chain Reactions  HSC Physics. (2019). <br> Science Ready. <a href="https://scienceready.com.au/pages/nuclear-fission-and-reactors?srsltid=AfmBOor8j96JNhhVFSAraCTQX-gJ_9n9k2j2fMcc17YoNi3jRi3_CbjJ">https://scienceready.com.au/pages/nuclear-fission-and-reactors?srsltid=AfmBOor8j96JNhhVFSAraCTQX-gJ_9n9k2j2fMcc17YoNi3jRi3_CbjJ
+</a>
+
+            <br>
+            <br>
+            <br>
+        </p>
+
+        <p class="apa-reference">
+            Nuclear News. (2024, June 12). <br> Surveys reveal public support for, but some concerns on, nuclear energy. Www.ans.org. 
+            <a href="https://www.ans.org/news/article-6112/surveys-reveal-public-support-for-but-some-concerns-on-nuclear-energy/">https://www.ans.org/news/article-6112/surveys-reveal-public-support-for-but-some-concerns-on-nuclear-energy/</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            Office of Nuclear Energy. (2021, March 24). <br> Nuclear Power Is the Most Reliable Energy Source and It’s Not Even Close. Energy.gov; Office of Nuclear Energy. 
+            <a href="https://www.energy.gov/ne/articles/nuclear-power-most-reliable-energy-source-and-its-not-even-close">https://www.energy.gov/ne/articles/nuclear-power-most-reliable-energy-source-and-its-not-even-close</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+
+        <p class="apa-reference">
+            Ready, S. (2019). <br> Nuclear Fission and Controlled Chain Reactions  HSC Physics. Science Ready. <a href="https://scienceready.com.au/pages/nuclear-fission-and-reactors?srsltid=AfmBOor8j96JNhhVFSAraCTQX-gJ_9n9k2j2fMcc17YoNi3jRi3_CbjJ">https://scienceready.com.au/pages/nuclear-fission-and-reactors?srsltid=AfmBOor8j96JNhhVFSAraCTQX-gJ_9n9k2j2fMcc17YoNi3jRi3_CbjJ</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+
+        <p class="apa-reference">
+            Schuster, E. (2022). <br> Plasma Control Laboratory. Www6.Lehigh.edu. <a href="https://www6.lehigh.edu/~eus204/lab/PCL_fusion.php">https://www6.lehigh.edu/~eus204/lab/PCL_fusion.php</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            Share of electricity production from nuclear. (2025).<br> Our World in Data. <a href="https://ourworldindata.org/grapher/share-electricity-nuclear">https://ourworldindata.org/grapher/share-electricity-nuclear</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            U.S. Department of energy. (2021, April 1). <br> Fission and Fusion: What Is the Difference? Energy.gov; U.S. Department of Energy.  <a href="https://www.energy.gov/ne/articles/fission-and-fusion-what-difference">https://www.energy.gov/ne/articles/fission-and-fusion-what-difference</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            US Department of Energy. (2024). <br> DOE Explains...Deuterium-Tritium Fusion Fuel. Energy.gov. <a href="https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel">https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            What is Fusion?  DIII-D National Fusion Facility. (2023). <br> D3dfusion.org. <a href="https://d3dfusion.org/what-is-fusion/">https://d3dfusion.org/what-is-fusion/</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            World Nuclear Association. (2022, December 22). <br>  Nuclear Fusion Power. World-Nuclear.org. <a href="https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power">https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+
+        <p class="apa-reference">
+            World Nuclear Association. (2024, May 16). <br>  Physics of Uranium and Nuclear Energy. World-Nuclear.org; World Nuclear Association. <a href="https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy">https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy</a>
+
+            <br>
+            <br>
+            <br>
+
+        </p>
+</body>
+</html>
